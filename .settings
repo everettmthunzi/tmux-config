@@ -1,0 +1,57 @@
+#
+# colors
+#
+set -g default-terminal "screen-256color"#
+
+#
+# reloading config file
+#
+bind r source-file ~/.tmux.conf
+
+#
+# remapping prefix from 'C-b' to 'C-space'
+#
+set -g prefix C-space
+bind space send-prefix
+
+#
+# splitting panes using | and -
+#
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+#
+# vim-like key bindings for pane navigation
+#
+unbind h
+bind h select-pane -L
+unbind j
+bind j select-pane -D
+unbind k
+bind k select-pane -U
+unbind l
+bind l select-pane -R
+
+#
+# resizing panes
+#
+unbind Left
+bind -r Left resize-pane -L 5
+unbind Right
+bind -r Right resize-pane -R 5
+unbind Down
+bind -r Down resize-pane -D 5
+unbind Up
+bind -r Up resize-pane -U 5
+
+#
+# enabling mouse mode (tmux 2.1 and above)
+#
+set -g mouse on
+
+#
+# delay on escape
+#
+set -s escape-time 0

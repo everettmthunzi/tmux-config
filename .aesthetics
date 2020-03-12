@@ -1,0 +1,5 @@
+#
+# focus
+#
+set -g window-style 'fg=colour241,bg=colour235'
+set -g window-active-style 'fg=colour250,bg=colour016'

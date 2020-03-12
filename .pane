@@ -1,0 +1,4 @@
+set -g pane-border-style fg=brightblack
+set -g pane-active-border-style fg=cyan
+set -g display-panes-colour brightblack
+set -g display-panes-active-colour cyan
